@@ -1,2 +1,2 @@
 # maker-annot-workflow
-workflow for maker-based ab initio genome annotation
+in-house workflow for maker-based ab initio genome annotation
