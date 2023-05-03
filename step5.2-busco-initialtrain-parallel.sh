@@ -14,11 +14,10 @@ fi
 cd ./augustus/round1
 
 busco \
-	-i Themeda_rnd1.all.maker.transcripts1000.fasta \
-	-o Themeda_rnd1_maker \
+	-i Microstegium_rnd1.all.maker.transcripts1000.fasta \
+	-o Microstegium_rnd1_maker \
 	--lineage_dataset /public1/home/sc80041/zhuyuzhi/databases/busco_db/embryophyta_odb10/ \
 	--mode genome \
-	-sp maize \
 	--evalue 1e-03 \
 	--long --augustus \
 	--cpu 40 --offline

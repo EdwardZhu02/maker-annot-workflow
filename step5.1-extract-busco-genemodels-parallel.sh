@@ -14,9 +14,9 @@ fi
 cd ./augustus/round1
 
 awk -v OFS="\t" '{ if ($3 == "mRNA") print $1, $4, $5 }' \
-	../../snap/round1/Themeda_rnd1.all.gff | \
+	../../snap/round1/Microstegium_rnd1.all.gff | \
 awk -v OFS="\t" '{ if ($2 < 1000) print $1, "0", $3+1000; else print $1, $2-1000, $3+1000 }' | \
 bedtools getfasta \
-	-fi ../../themeda_genome.fa \
+	-fi ../../microstegium_genome.fa \
 	-bed - \
-	-fo Themeda_rnd1.all.maker.transcripts1000.fasta
+	-fo Microstegium_rnd1.all.maker.transcripts1000.fasta

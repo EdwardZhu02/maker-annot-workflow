@@ -15,10 +15,10 @@ cd ./snap/round1
 
 echo 'Started model extraction.'
 
-gff3_merge -d ../../Themeda_rnd1.maker.output/Themeda_rnd1_master_datastore_index.log
+gff3_merge -d ../../Microstegium_rnd1.maker.output/Microstegium_rnd1_master_datastore_index.log
 # Export 'confident' gene models from MAKER
 # Use models with AED>0.25 and Aa_count>=50, helps get rid of junky models.
-maker2zff -x 0.25 -l 50 Themeda_rnd1.all.gff
+maker2zff -x 0.25 -l 50 Microstegium_rnd1.all.gff
 #rename 's/genome/Microstegium_rnd1.zff.length50_aed0.25/g' *
 echo 'Completed exporting gene models.'
 
@@ -38,5 +38,5 @@ cd ..
 echo 'Completed creating training params.'
 
 # HMM assembly
-hmm-assembler.pl Themeda_rnd1.zff.length50_aed0.25 ./params > Themeda_rnd1.zff.length50_aed0.25.hmm
+hmm-assembler.pl Microstegium_rnd1.zff.length50_aed0.25 ./params > Microstegium_rnd1.zff.length50_aed0.25.hmm
 echo 'Completed assembling hidden markov model.'
